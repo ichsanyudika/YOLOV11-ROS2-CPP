@@ -23,8 +23,8 @@ Before getting started, make sure you have installed and set up the following:
 ## Build
 
     # Clone the repository
-    git clone git clone https://github.com/ichsanyudika/yolov11-ros2-cpp.git
-    cd ~/yolov11-ros2-cpp
+    git clone https://github.com/ichsanyudika/YOLOV11-ROS2-CPP.git
+    cd ~/YOLOV11-ROS2-CPP
     
     # Build the workspace
     colcon build --symlink-install
