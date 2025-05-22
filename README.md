@@ -20,6 +20,31 @@ Before getting started, make sure you have installed and set up the following:
 
   ✅ Place the .onnx file in the models/ directory:
 
+## Verifying ONNX Runtime and Model Paths
+
+Before running the node, please make sure that the paths to your ONNX Runtime library, YOLOv11 ONNX model file, and the coconames.txt file are correctly set and accessible.
+Why is this important?
+
+  - The program needs to load the ONNX model for inference.
+
+  - The coconames.txt file contains the class labels for detected objects.
+
+  - The ONNX Runtime libraries must be correctly referenced for successful execution.
+
+How to verify paths
+
+  - ONNX Runtime Path
+
+  - Ensure that the ONNX Runtime shared libraries are installed and the path is correctly set in your environment or in the node parameters.
+
+  - Model Path
+
+  - Place your YOLOv11 ONNX model file (e.g., yolov11.onnx) inside the models/ directory of the project (or update the path accordingly).
+
+  - Coconames Path
+
+  - Ensure the coconames.txt file with the list of class names is located in the models/ directory (or update the path accordingly).
+
 ## Build
 
     # Clone the repository
