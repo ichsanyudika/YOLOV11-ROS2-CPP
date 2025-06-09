@@ -1,68 +1,46 @@
 ## Prerequisites
 
-Before getting started, make sure you have installed and set up the following:
+- ROS 2 (Foxy, Humble, or compatible)
 
-  ✅ ROS 2 (e.g., Foxy, Humble, or compatible version)
+- OpenCV ≥ 4.5 (with contrib)
 
-  ✅ C++17 compatible compiler (GCC 9+ or equivalent)
+-ONNX Runtime (C++ version)
 
-  ✅ OpenCV (version 4.5 or higher with contrib modules)
+- ROS 2 dependencies: rclcpp, geometry_msgs
 
-  ✅ ONNX Runtime (C++ API libraries and headers)
-
-  ✅ ROS 2 dependencies: rclcpp, geometry_msgs
-
-  ✅ Tools: cmake, colcon, and rosdep
+- Tools: cmake, colcon, rosdep
 
 ## Model Setup
 
-  ✅ Download a YOLOv11 ONNX model file (e.g., yolov11.onnx) from the official source or convert it from PyTorch.
+- Download the YOLOv11 ONNX model (e.g., yolov11.onnx)
 
-  ✅ Place the .onnx file in the models/ directory:
+- Place it in the models/ directory
 
-## Verifying ONNX Runtime and Model Paths
+- Also place coconames.txt (class labels) in the same folder
 
-Before running the node, please make sure that the paths to your ONNX Runtime library, YOLOv11 ONNX model file, and the coconames.txt file are correctly set and accessible.
-Why is this important?
+## Path Verification
 
-  - The program needs to load the ONNX model for inference.
+- ONNX Runtime: Libraries must be installed and linked properly
 
-  - The coconames.txt file contains the class labels for detected objects.
+- Model: yolov11.onnx inside models/
 
-  - The ONNX Runtime libraries must be correctly referenced for successful execution.
+- Labels: coconames.txt inside models/
 
-How to verify paths
-
-  - ONNX Runtime Path
-
-  - Ensure that the ONNX Runtime shared libraries are installed and the path is correctly set in your environment or in the node parameters.
-
-  - Model Path
-
-  - Place your YOLOv11 ONNX model file (e.g., yolov11.onnx) inside the models/ directory of the project (or update the path accordingly).
-
-  - Coconames Path
-
-  - Ensure the coconames.txt file with the list of class names is located in the models/ directory (or update the path accordingly).
-
-## Build
+## Build & Run
 
     # Clone the repository
     git clone https://github.com/ichsanyudika/YOLOV11-ROS2-CPP.git
-    cd ~/YOLOV11-ROS2-CPP
+    cd YOLOV11-ROS2-CPP
     
     # Build the workspace
     colcon build --symlink-install
     
-    # Source the workspace environment
+    # Source the environment
     source install/setup.bash
 
-## Running
-
+    # Run
     ros2 run yolo_ws main
 
-## Result
+### Result
 
 ![](output/output.png)  
-
-
