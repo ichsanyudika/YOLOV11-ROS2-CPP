@@ -4,13 +4,13 @@
 
 - OpenCV ≥ 4.5 (with contrib)
 
--ONNX Runtime (C++ version)
+- ONNX Runtime (C++ version)
 
 - ROS 2 dependencies: rclcpp, geometry_msgs
 
 - Tools: cmake, colcon, rosdep
 
-## Model Setup
+### Model Setup
 
 - Download the YOLOv11 ONNX model (e.g., yolov11.onnx)
 
@@ -18,7 +18,7 @@
 
 - Also place coconames.txt (class labels) in the same folder
 
-## Path Verification
+### Path Verification
 
 - ONNX Runtime: Libraries must be installed and linked properly
 
@@ -26,11 +26,11 @@
 
 - Labels: coconames.txt inside models/
 
-## Build & Run
+### Build & Run
 
     # Clone the repository
-    git clone https://github.com/ichsanyudika/YOLOV11-ROS2-CPP.git
-    cd YOLOV11-ROS2-CPP
+    git clone https://github.com/ichsanyudika/yolov11-ros2-cpp.git
+    cd yolov11-ros2-cp
     
     # Build the workspace
     colcon build --symlink-install
