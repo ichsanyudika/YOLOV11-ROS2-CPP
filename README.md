@@ -28,14 +28,14 @@
 
 ### Build & Run
 
-    # Clone the repository
+    #1 Clone the repository
     git clone https://github.com/ichsanyudika/yolov11-ros2-cpp.git
     cd yolov11-ros2-cp
     
-    # Build the workspace
+    #2 Build the workspace
     colcon build --symlink-install
     
-    # Source the environment
+    #3 Source the environment
     source install/setup.bash
 
     # Run
